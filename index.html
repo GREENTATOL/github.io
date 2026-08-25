@@ -1,5 +1,4 @@
-
-  <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -11,39 +10,59 @@
             padding: 0;
             height: 100%;
             width: 100%;
-            overflow: hidden; /* Prevents scrollbars */
+            overflow: hidden;
         }
 
         .main-bg {
             position: relative;
             width: 100vw;
             height: 100vh;
-            /* This loads your uploaded beach image */
             background-image: url('beach.jpg'); 
             background-size: cover;
             background-position: center;
         }
 
+        /* Title Banner styling */
+        .island-title {
+            position: absolute;
+            top: 5%;
+            left: 50%;
+            transform: translateX(-50%);
+            font-family: 'Georgia', serif;
+            font-size: 3vw;
+            color: #fdf6e3;
+            text-shadow: 3px 3px 0px #5c3317, 5px 5px 10px rgba(0,0,0,0.6);
+            letter-spacing: 2px;
+            text-align: center;
+            pointer-events: none;
+        }
+
         /* General Styling for the Wooden Planks */
         .lang-plank {
             position: absolute;
-            background-color: #8b4513; /* Rustic wood brown */
-            color: #fdf6e3; /* Creamy text */
+            background-color: #8b4513; 
+            color: #fdf6e3; 
             padding: 15px 30px;
-            border: 4px solid #5c3317; /* Darker wood border */
+            border: 4px solid #5c3317; 
             border-radius: 10px;
             font-family: 'Georgia', serif;
             font-size: 24px;
             text-decoration: none;
             cursor: pointer;
-            transition: transform 0.2s, box-shadow 0.2s;
-            box-shadow: 5px 5px 0px rgba(0,0,0,0.3); /* 3D shadow effect */
+            box-shadow: 5px 5px 0px rgba(0,0,0,0.4);
             text-shadow: 1px 1px 0px #5c3317;
+            transition: transform 0.2s, box-shadow 0.2s;
         }
 
+        /* Wiggle Animation on Hover */
         .lang-plank:hover {
-            transform: translateY(-5px); /* Lift slightly on hover */
-            box-shadow: 8px 8px 0px rgba(0,0,0,0.3);
+            animation: wiggle 0.4s ease-in-out infinite alternate;
+            box-shadow: 8px 8px 0px rgba(0,0,0,0.5);
+        }
+
+        @keyframes wiggle {
+            0% { transform: rotate(0deg) translateY(-5px); }
+            100% { transform: rotate(3deg) translateY(-8px); }
         }
 
         /* --- POSITIONING THE PLANKS ON THE BEACH --- */
@@ -61,14 +80,17 @@
 <body>
 
     <div class="main-bg">
-        <!-- Plank 1: Learn Japanese -->
-        <a href="japanese_island.html" id="plank-japanese" class="lang-plank">
+        <!-- Title Banner to fill up the empty space -->
+        <div class="island-title">KATAKANA VIBE</div>
+
+        <!-- Plank 1: Learn Japanese -> Points to our new beginner page -->
+        <a href="japanese_beginner.html" id="plank-japanese" class="lang-plank">
             Learn Japanese
         </a>
 
-        <!-- Plank 2: Tok Pisin -->
+        <!-- Plank 2: Tok Pisin (Beta) -->
         <a href="tok_pisin_quiz.html" id="plank-tokpisin" class="lang-plank">
-            Learn Tok Pisin
+            Learn Tok Pisin <span style="font-size: 14px; color: #ffd700;">(Beta)</span>
         </a>
     </div>
 
