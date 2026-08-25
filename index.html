@@ -22,29 +22,24 @@
             background-position: center;
         }
 
-        /* Classy Carved Polynesian Wood Title Banner */
+        /* Floating Carved Polynesian Letters on the Left Sky */
         .island-title {
             position: absolute;
-            top: 6%;
-            left: 50%;
-            transform: translateX(-50%);
+            top: 15%;
+            left: 8%; /* Shifted more to the left */
+            max-width: 350px; /* Constrains width so it wraps nicely */
             font-family: 'Georgia', serif;
             font-size: 2.2vw;
             font-weight: bold;
-            color: #d2b48c; /* Tan wood color */
-            text-align: center;
+            line-height: 1.3;
+            color: #4a2e18; /* Rich carved wood brown */
+            text-align: left;
             pointer-events: none;
-            letter-spacing: 3px;
-            /* Carved wood effect using layered shadows */
+            letter-spacing: 2px;
+            /* Carved/engraved illusion directly into the atmosphere/sky */
             text-shadow: 
-                -1px -1px 0px #3d2314,  /* Dark inner shadow for carved look */
-                1px 1px 2px rgba(255, 255, 255, 0.4), /* Highlight on bottom edge */
-                0px 5px 10px rgba(0, 0, 0, 0.7); /* Deep drop shadow */
-            background: linear-gradient(to bottom, #5c3317, #3d2314);
-            padding: 12px 30px;
-            border-radius: 8px;
-            border: 4px solid #2b170c;
-            box-shadow: 0px 8px 15px rgba(0,0,0,0.5);
+                1px 1px 0px rgba(255, 255, 255, 0.6), /* Bright sunlit top edge */
+                -1px -1px 2px rgba(0, 0, 0, 0.7);     /* Deep shadow inset */
         }
 
         /* General Styling for the Wooden Planks */
@@ -78,7 +73,7 @@
         /* --- POSITIONING THE PLANKS ON THE BEACH --- */
         #plank-japanese {
             top: 55%;  
-            left: 45%;
+            left: 32%;
         }
 
         #plank-tokpisin {
@@ -90,7 +85,7 @@
 <body>
 
     <div class="main-bg">
-        <!-- Classy Carved Polynesian Wood Title -->
+        <!-- Floating Carved Polynesian Letters on the Left -->
         <div class="island-title">WELCOME TO KATAKANAVIBE ISLAND</div>
 
         <!-- Plank 1: Learn Japanese -->
