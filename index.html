@@ -22,19 +22,29 @@
             background-position: center;
         }
 
-        /* Title Banner styling */
+        /* Classy Carved Polynesian Wood Title Banner */
         .island-title {
             position: absolute;
-            top: 5%;
+            top: 6%;
             left: 50%;
             transform: translateX(-50%);
             font-family: 'Georgia', serif;
-            font-size: 3vw;
-            color: #fdf6e3;
-            text-shadow: 3px 3px 0px #5c3317, 5px 5px 10px rgba(0,0,0,0.6);
-            letter-spacing: 2px;
+            font-size: 2.2vw;
+            font-weight: bold;
+            color: #d2b48c; /* Tan wood color */
             text-align: center;
             pointer-events: none;
+            letter-spacing: 3px;
+            /* Carved wood effect using layered shadows */
+            text-shadow: 
+                -1px -1px 0px #3d2314,  /* Dark inner shadow for carved look */
+                1px 1px 2px rgba(255, 255, 255, 0.4), /* Highlight on bottom edge */
+                0px 5px 10px rgba(0, 0, 0, 0.7); /* Deep drop shadow */
+            background: linear-gradient(to bottom, #5c3317, #3d2314);
+            padding: 12px 30px;
+            border-radius: 8px;
+            border: 4px solid #2b170c;
+            box-shadow: 0px 8px 15px rgba(0,0,0,0.5);
         }
 
         /* General Styling for the Wooden Planks */
@@ -80,10 +90,10 @@
 <body>
 
     <div class="main-bg">
-        <!-- Title Banner to fill up the empty space -->
-        <div class="island-title">KATAKANA VIBE</div>
+        <!-- Classy Carved Polynesian Wood Title -->
+        <div class="island-title">WELCOME TO KATAKANAVIBE ISLAND</div>
 
-        <!-- Plank 1: Learn Japanese -> Points to our new beginner page -->
+        <!-- Plank 1: Learn Japanese -->
         <a href="japanese_beginner.html" id="plank-japanese" class="lang-plank">
             Learn Japanese
         </a>
