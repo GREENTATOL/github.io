@@ -10,60 +10,99 @@
             padding: 0;
             height: 100%;
             width: 100%;
-            background-color: #1a2b3c; /* Deep ocean vibe */
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-family: 'Georgia', serif;
-            color: #fdf6e3;
+            overflow: hidden;
         }
 
-        .container {
-            text-align: center;
-            background: rgba(139, 69, 19, 0.85);
-            padding: 40px;
-            border: 4px solid #5c3317;
-            border-radius: 15px;
-            box-shadow: 0px 10px 0px rgba(0,0,0,0.5);
-            max-width: 500px;
+        .nest-bg {
+            position: relative;
+            width: 100vw;
+            height: 100vh;
+            background-image: url('turtlenestbeginner.jpg'); 
+            background-size: cover;
+            background-position: center;
         }
 
-        h1 {
-            color: #ffd700;
-            margin-top: 0;
-            text-shadow: 2px 2px 0px #3b2210;
+        /* The 'A' Egg (Clickable Hotspot) */
+        .a-egg-hotspot {
+            position: absolute;
+            top: 40%; 
+            left: 45%;
+            width: 15%;  
+            height: 25%; 
+            cursor: pointer;
+            border-radius: 50%; 
+            background-color: rgba(255, 255, 255, 0.0); 
+            transition: transform 0.3s ease;
+            z-index: 10;
         }
 
-        p {
-            font-size: 18px;
-            line-height: 1.5;
+        /* Wiggle Animation for the Egg on Hover */
+        .a-egg-hotspot:hover {
+            animation: gentle-wiggle 0.3s ease-in-out infinite alternate;
+            background-color: rgba(255, 223, 0, 0.1); 
         }
 
+        @keyframes gentle-wiggle {
+            0% { transform: rotate(-3deg) scale(1.05); }
+            100% { transform: rotate(3deg) scale(1.05); }
+        }
+
+        /* Back Button to return to the beach */
         .back-btn {
-            display: inline-block;
-            margin-top: 20px;
-            background-color: #5c3317;
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            background-color: #8b4513;
             color: #fdf6e3;
             padding: 10px 20px;
-            border: 2px solid #3b2210;
+            border: 3px solid #5c3317;
             border-radius: 8px;
             text-decoration: none;
+            font-family: 'Georgia', serif;
             font-weight: bold;
+            box-shadow: 3px 3px 0px rgba(0,0,0,0.4);
             transition: transform 0.2s;
+            z-index: 20;
         }
 
         .back-btn:hover {
             transform: translateY(-3px);
-            background-color: #70401d;
+            background-color: #a0522d;
+        }
+
+        /* Instruction Box */
+        .instruction-box {
+            position: absolute;
+            top: 10%;
+            left: 50%;
+            transform: translateX(-50%);
+            font-family: 'Georgia', serif;
+            color: #4a2e18;
+            background: rgba(253, 246, 227, 0.85);
+            padding: 10px 25px;
+            border-radius: 20px;
+            border: 2px solid #8b4513;
+            font-weight: bold;
+            font-size: 18px;
+            box-shadow: 0px 4px 8px rgba(0,0,0,0.3);
+            pointer-events: none;
         }
     </style>
 </head>
 <body>
 
-    <div class="container">
-        <h1>Japanese Beginner Island 🐢</h1>
-        <p>You have successfully hatched onto the Japanese learning path! Next, we will add your turtle egg lessons and characters here.</p>
+    <div class="nest-bg">
+        <!-- Instruction Banner -->
+        <div class="instruction-box">
+            🐢 Click the glowing "あ" egg to hatch your first lesson!
+        </div>
+
+        <!-- THE CLICKABLE EGG (Links to your future lesson page) -->
+        <a href="hiragana_a_lesson.html" title="Start Hiragana あ">
+            <div class="a-egg-hotspot"></div>
+        </a>
         
+        <!-- Back to Beach Button -->
         <a href="index.html" class="back-btn">← Back to Beach</a>
     </div>
 
